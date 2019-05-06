@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Exercicio-1 Salário </title>
+    </h:head>
+    <h:body>
+        
+        <fieldset>
+            <h4>Formulário para entrada de dados</h4>
+            <p>
+                1) Codifique uma aplicação para fazer o calculo do Salário. <br/>
+                Utilizando Java Server Faces crie um formulário (Figura 1) para a entrada dos dados,<br/>
+                e um controlador do JSF para executar o processamento, e posteriormente redirecionar<br/>
+                para uma tela que exibe a saída (Figura 2). O calculo do INSS deve respeitar os valores da tabela 1:<br/>
+                <br/>
+                <table border="1">
+                    <thead>Tabale de Desconto INSS</thead>
+                    <tr>
+                        <th>De</th>
+                        <th>Até</th>
+                        <th>Alicota</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>0,00</td>
+                            <td>1.556,94</td>
+                            <td>8,00%</td>
+                        </tr>
+                        <tr>
+                            <td>1.556,95</td>
+                            <td>2.594,92</td>
+                            <td>9,00%</td>
+                        </tr>
+                        <tr>
+                            <td>2.594,93</td>
+                            <td>5.189,82</td>
+                            <td>11,00%</td>
+                        </tr>    
+                    </tbody>
+                </table>
+            </p>
+            <h:form>
+                <h:commandLink value="Salario" action="#{controleSalario.dados()}"/>
+            </h:form>
+        </fieldset>
+    </h:body>
+</html>
+

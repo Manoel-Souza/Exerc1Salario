@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Salario</title>
+    </h:head>
+    <h:body>
+        <h2>Dados de Salário</h2>
+        <h:form>
+            <fieldset>
+                <h:panelGrid columns="2">
+                    <f:facet name="header">
+                        <h:outputLabel value="Informe seus Dados"/>
+                    </f:facet>
+                    <f:facet name="footer">
+                        <h:commandButton value="Enviar" action="#{controleSalario.calcular()}"/>
+                    </f:facet>
+
+                    <h:outputLabel value="Nome:"/>
+                    <h:inputText value="#{controleSalario.nome}"/>
+                    <h:outputLabel value="Salario:"/>
+                    <h:inputText value="#{controleSalario.salario}"/>
+                    
+                </h:panelGrid>
+                <p>
+                     <table border="1">
+                    <thead>Tabale de Desconto INSS</thead>
+                    <tr>
+                        <th>De</th>
+                        <th>Até</th>
+                        <th>Alicota</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>0,00</td>
+                            <td>1.556,94</td>
+                            <td>8,00%</td>
+                        </tr>
+                        <tr>
+                            <td>1.556,95</td>
+                            <td>2.594,92</td>
+                            <td>9,00%</td>
+                        </tr>
+                        <tr>
+                            <td>2.594,93</td>
+                            <td>5.189,82</td>
+                            <td>11,00%</td>
+                        </tr>    
+                    </tbody>
+                </table>
+                </p>
+            </fieldset>
+        </h:form>
+    </h:body>
+</html>
+
